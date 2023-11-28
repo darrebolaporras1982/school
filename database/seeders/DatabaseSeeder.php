@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //$this->call(AlumnoSeeder::class);
-        Alumno::factory(20)->create();
+        //$this->call(AlumnoSeeder::class);//este es para llamar a los seeder
+        Alumno::factory(20)->create();//este llamara a la funcion de factory
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AlumnoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/',function(){
     return view('welcome');
 });
+Route::get('alumnos',[AlumnoController::class,'alumnos'])->name('alumnos');
+Route::get('create',[AlumnoController::class,'create'])->name('create');
+Route::get('alumnos/{id}',[AlumnoController::class,'show'])->name('show');

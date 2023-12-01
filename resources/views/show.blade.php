@@ -9,5 +9,8 @@
 <body>
     <h1>El alumno que buscas es:</h1>
     {{ $alumno->edad }} - {{ $alumno->telefono }} - {{ $alumno->direccion }}
+
+    <a href="{{ route('edit',["id"=>$alumno->id]) }}">Editar datos de {{ $alumno->nom_ape }}</a>
+    <a href="{{ route('delete',["id"=>$alumno->id]) }}">Eliminar</a>
 </body>
 </html>

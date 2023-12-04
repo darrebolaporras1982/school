@@ -10,9 +10,14 @@
     <table>
         <thead><th>Nombre y Apellidos</th><th>Profesion</th><th>Grado Académico</th><th>Teléfono</th></thead>
         @foreach($profesors as $profesor)
-        <tr>
-        <td>{{-- <a href="{{ route('show',["id"=>$alumno->id]) }}"> --}}{{$profesor->nom_ape}}{{-- </a> --}}</td><td>{{ $profesor->profesion }}</td><td>{{ $profesor->grado_academico }}</td><td>{{ $profesor->telefono }}</td> <!--aqui hago un link que me lleva a los datos del alumno-->
-        </tr>
+        <tbody>
+            <tr>
+                <td>{{$profesor->nom_ape}}</td><td>{{ $profesor->profesion }}</td><td>{{ $profesor->grado_academico }}</td><td>{{ $profesor->telefono }}</td> <!--aqui hago un link que me lleva a los datos del alumno-->
+                @foreach ($profesor ->cursos as $curso)
+                    <td>{{ $curso->nombre }}</td>
+                @endforeach
+                </tr>
+        </tbody>
     @endforeach
     </table>
 </body>

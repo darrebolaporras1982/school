@@ -47,4 +47,7 @@ class AlumnoController extends Controller
             $alumno->deleted();
             return redirect()->route('a la pagina que queramos')*/
     }
+    public function confirmar($id){
+        return view('confirmar',compact('id'));
+    }
 }

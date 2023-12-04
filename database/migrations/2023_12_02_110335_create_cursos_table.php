@@ -15,7 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('nombre',255);
             $table->enum('nivel',['iniciacion','intermedio','avanzado']);
-            $table->integer('horas');
+            $table->integer('horas_academicas');
+
+            //en la relacion de 1:N pasamos a la tabla muchos la clave primaria de la tabla 1
+            //creamos la columna profesors_id como clave foranea de la tabla profesors
+            $table->unsignedBigInteger('profesors_id');
+            $table->foreign('profesors_id')->references('id')->on('profesors');
+
             $table->timestamps();
         });
     }

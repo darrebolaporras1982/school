@@ -23,5 +23,7 @@ class DatabaseSeeder extends Seeder
 
         //$this->call(CursoSeeder::class);//este es para llamar a los seeder
         Curso::factory(50)->create();//este llamará a la funcion de factory
+
+        $this->call(AlumnoCursoSeeder::class);
     }
 }

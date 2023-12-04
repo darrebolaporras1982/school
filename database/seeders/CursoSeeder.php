@@ -16,19 +16,19 @@ class CursoSeeder extends Seeder
         $curso=new Curso();
         $curso->nombre='html';
         $curso->nivel='iniciacion';
-        $curso->horas=50;
+        $curso->horas_academicas=50;
         $curso->save();
 
         $curso=new Curso();
         $curso->nombre='css';
         $curso->nivel='avanzado';
-        $curso->horas=150;
+        $curso->horas_academicas=150;
         $curso->save();
 
         $curso=new Curso();
         $curso->nombre='Laravel';
         $curso->nivel='iniciacion';
-        $curso->horas=50;
+        $curso->horas_academicas=50;
         $curso->save();
     }
 }

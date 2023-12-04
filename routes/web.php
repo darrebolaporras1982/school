@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\ProfesorController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,7 @@ Route::get('/',function(){
     return view('welcome');
 });
 Route::get('alumnos',[AlumnoController::class,'alumnos'])->name('alumnos');
+Route::get('profesors',[ProfesorController::class,'view_profesors'])->name('profesores');
 Route::put('update/{alumno}',[AlumnoController::class,'update'])->name('editstore');
 Route::get('create',[AlumnoController::class,'create'])->name('create');
 Route::get('alumnos/{id}',[AlumnoController::class,'show'])->name('show');
